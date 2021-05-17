@@ -4,6 +4,10 @@ const inquirer = require('inquirer');
 
 
 //Import local modules
+const view = require('scripts/view.js')
+
+
+
 
 //set up connections
 const connection = mysql.createConnection({
@@ -19,7 +23,7 @@ const connection = mysql.createConnection({
     promptUser();
   });
 
-  const promptUser = () => {
+const promptUser = () => {
       inquirer.prompt({
           name:'action',
           type:'list',
