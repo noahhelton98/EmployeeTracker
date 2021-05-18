@@ -4,7 +4,10 @@ const inquirer = require('inquirer');
 
 
 //Import local modules
-const view = require('scripts/view.js')
+const viewFunctions = require('./scripts/view.js')
+const deleteFunctions = require('./scripts/delete.js')
+const updateFunctions = require('./scripts/update.js')
+const addFunctions = require('./scripts/add.js')
 
 
 
@@ -31,15 +34,13 @@ const promptUser = () => {
           choices: [
               'View All Employees',
               'View All Employees by Department', 
-              'View All Employees by Manager', 
               'Add Employee',
               'Remove Employee',
               'Update Employee Role',
-              'Update Employee Manager', 
-              'View All Roles', 
+              'View Roles', 
               'Add Role', 
               'Remove Role',
-              'View All Departments',
+              'View Departments',
               'Add Department', 
               'Remove Department',
               'Exit'
@@ -48,44 +49,55 @@ const promptUser = () => {
       .then((answer) => {
           switch (answer.action){
             case 'View All Employees':
-                viewAllEmployees();
+                viewFunctions.viewAllEmployees();
                 break;
 
             case 'View All Employees by Department':
-                viewByDepartment();
+                viewFunctions.viewByDepartment();
                 break;
 
-            case 'View All Employees by Manager':
+          /*   case 'View All Employees by Manager':
                 viewByManager();
-                break;
+                break; */
 
             case 'Add Employee':
-                addEmployee();
+                addFunctions.addEmployees();
                 break
 
             case 'Remove Employee':
-                removeEmployee();
+                deleteFunctions.deleteEmployee();
                 break;
 
             case 'Update Employee Role':
-                updateRole();
+                updateFunctions.updateEmployeeRole();
                 break;
 
-            case 'Update Employee Manager':
+           /*  case 'Update Employee Manager':
                 updateManager();
-                break;
+                break; */
 
             case 'View Roles':
-                viewRoles();
+                viewFunctions.viewRoles();
                 break;
 
             case 'Add Role':
-                addRole();
+                addFunctions.addRoles();
                 break;
 
             case 'Remove Role':
-                removeRole();
+                deleteFunctions.deleteRole();
                 break;
+            case 'View Departments':
+                viewFunctions.viewDepartments();
+                break;
+            
+            case 'Add Department':
+                addFunctions.addDepartment();
+                break;
+
+            case 'Remove Department':
+                deleteFunctions.deleteDepartment();
+
             case 'Exit':
                 connection.end();
                 break;
@@ -95,4 +107,5 @@ const promptUser = () => {
 
 
 
-  
+
+
