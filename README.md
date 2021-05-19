@@ -11,3 +11,4 @@ This tool was generated using node.js, the inquirer module, and mysql module. Fu
 First you will need to run an npm install to install all of the dependencies. Next, you will need to create your database in MySQL workbench, to do this, copy and paste the schema and seed file(if you want to test it out, however if you want to start your company tracker from scratch feel free to skip copying the schema.sql file) in the MySQL Workbench. Change working directories (cd) into whichever directory contains the Tracker.js module and run the command node Tracker.js 
 
 ## Demonstration
+Check out the movie folder!
