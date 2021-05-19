@@ -23,7 +23,7 @@ const connection = mysql.createConnection({
         message: 'What is the name of the new department you would like to add?',
     }).then((answer) => {
 
-        var query = `INSERT INTO employees_db.departments (title)
+        var query = `INSERT INTO employees_db.departments (name)
         VALUES ('${answer.newDepartment}')`
         connection.query(query, function(err, res) {
             if (err) throw err;

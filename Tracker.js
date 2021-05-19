@@ -52,6 +52,7 @@ const promptUser = () => {
                 viewFunctions.viewAllEmployees();
                 break;
 
+
             case 'View All Employees by Department':
                 viewFunctions.viewByDepartment();
                 break;
@@ -62,14 +63,17 @@ const promptUser = () => {
 
             case 'Add Employee':
                 addFunctions.addEmployees();
+
                 break
 
             case 'Remove Employee':
                 deleteFunctions.deleteEmployee();
+
                 break;
 
             case 'Update Employee Role':
                 updateFunctions.updateEmployeeRole();
+
                 break;
 
            /*  case 'Update Employee Manager':
@@ -78,25 +82,32 @@ const promptUser = () => {
 
             case 'View Roles':
                 viewFunctions.viewRoles();
+
                 break;
 
             case 'Add Role':
                 addFunctions.addRoles();
+
                 break;
 
             case 'Remove Role':
                 deleteFunctions.deleteRole();
+
                 break;
             case 'View Departments':
                 viewFunctions.viewDepartments();
+
                 break;
             
             case 'Add Department':
                 addFunctions.addDepartment();
+
                 break;
 
             case 'Remove Department':
                 deleteFunctions.deleteDepartment();
+                break;
+
 
             case 'Exit':
                 connection.end();
@@ -108,4 +119,4 @@ const promptUser = () => {
 
 
 
-
+  
